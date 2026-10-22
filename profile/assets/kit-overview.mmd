@@ -1,0 +1,25 @@
+flowchart TD
+    subgraph build["BUILD TIME · the agent uses the kit"]
+      direction LR
+      skill["GUIDANCE<br/>Versioned agent skill<br/>Examples + task profile"]
+      recipe["CONFIGURATION<br/>Real field mappings<br/>Search + layout + limits"]
+      tooling["PROJECT TOOLS<br/>Optional scaffolding<br/>Decision notes + checks"]
+      skill --> recipe
+      recipe --> tooling
+    end
+    subgraph runtime["RUN TIME · you use the explorer, not an LLM"]
+      direction LR
+      source["LOCAL INPUT<br/>CSV / TSV / JSONL<br/>EAD archival hierarchy"]
+      data["DATA LAYER<br/>Readers + record model<br/>Search + profiles + export"]
+      ui["TERMINAL UI<br/>Bubble Tea + Lip Gloss<br/>A / B layouts, shared state"]
+      result["RESEARCH OUTPUT<br/>Read records + source<br/>Inspect / JSONL export"]
+      source --> data
+      data --> ui
+      ui --> result
+    end
+    recipe --> data
+    tooling --> ui
+    class skill,recipe,tooling agent
+    class source input
+    class data,ui core
+    class result output

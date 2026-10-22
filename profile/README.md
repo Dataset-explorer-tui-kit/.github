@@ -5,13 +5,33 @@ Small, focused terminal explorers for datasets — built on the Charm ecosystem.
 The reusable kit provides a starting point; each explorer lives in its own
 repository and can evolve independently. No LLM is required at runtime.
 
+## The whole kit
+
+The kit brings together agent guidance, explicit recipes, project tooling, local
+data readers, and a reusable terminal UI. Build-time assistance stays separate
+from the app you run. Choose the smallest useful solution: a recipe first,
+custom code only for real capability gaps.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-overview-dark.svg">
+  <img alt="Whole-kit overview: at build time the agent uses the skill, recipes and project tools; at runtime local data flows through readers and the data layer into the Charm terminal UI and research outputs. No runtime LLM is involved." src="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-overview-light.svg">
+</picture>
+
+**Use what fits your data:** tables, feeds, or archival hierarchies. Keep the
+source unchanged, preserve its structure, and export only the actual matches.
+A database is not mandatory; large-data adapters are deliberate project choices,
+not implied features of every recipe.
+
 ## From a dataset to your own explorer
 
 Give a coding agent a local dataset, a research question, and the kit's
 [workflow skill](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit/blob/main/skills/dataset-explorer/SKILL.md).
 The agent uses the kit rather than starting an interface from scratch.
 
-![Agent-assisted workflow: provide a dataset and research question; the agent inspects a bounded sample, configures a recipe or scaffolds a focused app, then verifies it. You browse, search, inspect, and export in the resulting terminal explorer.](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-workflow.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-workflow-dark.svg">
+  <img alt="Agent workflow: agree a goal and scope, inspect the dataset, choose a recipe or approved custom work, verify with a failure-and-retry loop, checkpoint agent-managed changes, and hand off the explorer. Publication requires separate authorization, a safe VHS demo and verified CI." src="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-workflow-light.svg">
+</picture>
 
 **The agent helps build it. It does not run inside it.** The resulting explorer
 needs no LLM or Hermes at runtime. Original datasets stay unchanged; selected-cover
@@ -28,7 +48,7 @@ CSV/TSV tables, JSONL records and EAD archival hierarchies have existing readers
 Other formats or custom behavior may need a focused adapter. A recipe is often
 enough: a new dataset does not automatically need a new repository.
 
-<sub>Diagram rendered with Pele. Editable source: [kit-workflow.mmd](assets/kit-workflow.mmd).</sub>
+<sub>Both diagrams are rendered with Pele, with light and dark variants selected by your browser's color preference. [Editable sources and rendering instructions](assets/DIAGRAMS.md).</sub>
 
 ## A project history that explains why
 
@@ -36,8 +56,6 @@ For an authorized standalone project, the agent creates the folder, Git repo,
 active `AGENTS.md`, initial dataset profile, and decision/checkpoint helpers.
 You describe what you want; **the agent takes the decision notes from the session**.
 Reasons distinguish explicit user intent, agent inference, and unknowns.
-
-![Session-to-commit workflow: project setup, session-derived decisions, required checks, local commits, VHS demos and authorized organization publication, then later comparison across projects.](assets/session-to-commit.svg)
 
 Every meaningful increment gets required tests/vet/build and an explicit-file
 local commit containing its decision and verification receipt. Failed checks stop
@@ -59,8 +77,8 @@ publication is explicitly approved.
 The demo contains only fictional records, not project datasets or session history.
 See the kit's [project workflow](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit/blob/main/docs/PROJECT-WORKFLOW.md)
 and [recipe-selection guide](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit/blob/main/docs/RECIPE-SELECTION.md).
-The workflow diagram is rendered with Pele; its editable source is
-[session-to-commit.mmd](assets/session-to-commit.mmd).
+The workflow above includes checkpoints and separately authorized publication;
+the project guide explains their safety boundaries in detail.
 
 ## Repositories
 

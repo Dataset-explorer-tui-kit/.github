@@ -1,21 +1,25 @@
 flowchart TD
-    question["YOU<br/>Local dataset +<br/>research question"]
-    agent["CODING AGENT<br/>Read the kit skill<br/>Inspect a bounded sample"]
-    choice{"Does the kit already<br/>fit the dataset?"}
-    recipe["CONFIGURE<br/>Map real fields<br/>in a recipe"]
-    scaffold["EXTEND<br/>Scaffold a standalone app<br/>Add only missing behavior"]
-    verify["VERIFY<br/>Tests + real data checks<br/>Wide and narrow UI runs"]
-    app["YOU USE THE EXPLORER<br/>Browse, search, inspect<br/>Export matching records"]
-    question --> agent
-    agent --> choice
-    choice -->|Yes| recipe
-    choice -->|Needs custom behavior| scaffold
+    intent["01 · YOU SET THE GOAL<br/>Local dataset + question<br/>Agree scope + location"]
+    inspect["02 · AGENT INSPECTS<br/>Read skill + sample data<br/>Check source + budget"]
+    fit{"03 · Choose the<br/>smallest useful solution"}
+    recipe["RECIPE FIRST<br/>Map fields and search<br/>Explain choices + gaps"]
+    custom["CUSTOM WORK<br/>Approved standalone app<br/>Extend only the gaps"]
+    verify["04 · VERIFY THE RESULT<br/>Required tests, vet, build<br/>Real data + wide/narrow UI"]
+    history["05 · RECORD THE WHY<br/>Agent-managed projects:<br/>decision + local checkpoint"]
+    use["06 · HAND OFF AND USE<br/>Run command + limits<br/>Browse, search, export"]
+    publish["OPTIONAL · PUBLISH<br/>Separate authorization<br/>Safe VHS demo + check CI"]
+    intent --> inspect
+    inspect --> fit
+    fit -->|Supported| recipe
+    fit -->|Capability gap| custom
     recipe --> verify
-    scaffold --> verify
-    verify --> app
-    classDef human fill:#eff6ff,stroke:#2563eb,color:#172554
-    classDef build fill:#f5f3ff,stroke:#7c3aed,color:#2e1065
-    classDef runtime fill:#ecfdf5,stroke:#059669,color:#064e3b
-    class question human
-    class agent,choice,recipe,scaffold,verify build
-    class app runtime
+    custom --> verify
+    verify -->|Pass| history
+    verify -.->|Fail: fix and retry| fit
+    history --> use
+    use -.-> publish
+    class intent input
+    class inspect,fit,recipe,custom agent
+    class verify,history core
+    class use output
+    class publish optional
