@@ -1,0 +1,28 @@
+flowchart TD
+    U["Research request<br/>and local dataset"]
+    S["Approved new project<br/>folder + Git repo<br/>AGENTS.md + profile"]
+    B["Agent builds a slice<br/>recipe first<br/>custom code for gaps"]
+    N["Agent writes a note<br/>from this session<br/>request + decision<br/>why + alternatives"]
+    P["Reason provenance<br/>user-explicit<br/>agent-inference<br/>or unknown"]
+    G{"Required checks<br/>and safe paths<br/>pass?"}
+    F["Stop, keep pending<br/>report the failure<br/>do not bypass gates"]
+    C["Local Git checkpoint<br/>explicit paths + note<br/>verification receipt<br/>Decision ID trailer"]
+    A{"Publish explicitly<br/>authorized?"}
+    V["Record real TUI<br/>with VHS on safe data<br/>inspect frames<br/>embed GIF in README"]
+    H["Push to approved repo<br/>under organization<br/>keep visibility<br/>verify remote state"]
+    R["Update organization<br/>repository guide<br/>in profile README"]
+    L["Later: compare notes<br/>across projects<br/>find repeated choices<br/>no DSPy optimizer yet"]
+    U --> S
+    S --> B
+    B --> N
+    P -.-> N
+    N --> G
+    G -->|"no"| F
+    F --> B
+    G -->|"yes"| C
+    C -->|"next change"| B
+    C --> A
+    A -->|"yes"| V
+    V --> H
+    H --> R
+    C -.-> L

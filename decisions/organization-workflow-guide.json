@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "id": "organization-workflow-guide",
+  "created_at": "2026-10-22T19:44:57.663360+00:00",
+  "request": "Update the organization README to explain the automated explorer workflow and show its diagram and VHS demo.",
+  "decision": "Document the project-history workflow in the organization profile and include only the fictional demo and Pele diagram assets.",
+  "why": {
+    "text": "Keep the organization repository guide aligned with the kit workflow.",
+    "origin": "agent-inference"
+  },
+  "evidence": "The user explicitly requested the organization README update, a VHS README demo and a Pele workflow diagram. Local profile links and GIF header were checked; the same diagram and demo frames were inspected in the kit. No private dataset or raw transcript is included.",
+  "alternatives": [
+    "Link directly to private repository image URLs, which anonymous organization-profile readers cannot load."
+  ],
+  "verification": {
+    "status": "passed",
+    "scope": "Documentation-only repository; no Go program or Go gates apply here.",
+    "checks": [
+      {"argv": ["git", "diff", "--check"], "exit_code": 0},
+      {"kind": "manual", "result": "Profile local links resolve; GIF header is valid; copied assets match the visually inspected kit demo and Pele diagram."}
+    ]
+  }
+}

@@ -30,11 +30,38 @@ enough: a new dataset does not automatically need a new repository.
 
 <sub>Diagram rendered with Pele. Editable source: [kit-workflow.mmd](assets/kit-workflow.mmd).</sub>
 
+## A project history that explains why
+
+For an authorized standalone project, the agent creates the folder, Git repo,
+active `AGENTS.md`, initial dataset profile, and decision/checkpoint helpers.
+You describe what you want; **the agent takes the decision notes from the session**.
+Reasons distinguish explicit user intent, agent inference, and unknowns.
+
+![Session-to-commit workflow: project setup, session-derived decisions, required checks, local commits, VHS demos and authorized organization publication, then later comparison across projects.](assets/session-to-commit.svg)
+
+Every meaningful increment gets required tests/vet/build and an explicit-file
+local commit containing its decision and verification receipt. Failed checks stop
+the checkpoint; no background watcher or automatic push is installed. Decision
+notes can later be compared across projects; no DSPy optimizer is installed yet.
+
+Before publishing a new explorer here, record the actual binary with **VHS** on
+reviewed safe data, embed the GIF in its README, retain organization attribution,
+and update the repository guide below. Visibility stays private unless public
+publication is explicitly approved.
+
+![Real kit binary on fictional catalogue records: browse, notes-only search, fields and source. Recorded with VHS.](assets/recipe-selection.gif)
+
+The demo contains only fictional records, not project datasets or session history.
+See the kit's [project workflow](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit/blob/main/docs/PROJECT-WORKFLOW.md)
+and [recipe-selection guide](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit/blob/main/docs/RECIPE-SELECTION.md).
+The workflow diagram is rendered with Pele; its editable source is
+[session-to-commit.mmd](assets/session-to-commit.mmd).
+
 ## Repositories
 
 | Repository | Purpose |
 | --- | --- |
-| **[dataset-explorer-kit](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit)** | Main repository: the reusable kit, documentation, examples, and scaffolding. |
+| **[dataset-explorer-kit](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit)** | Main repository: reusable kit, recipe selection, agent-managed decision history, scaffolding and VHS demos. |
 | [cbk-explorer](https://github.com/Dataset-explorer-tui-kit/cbk-explorer) | A dataset-specific explorer for the Dutch children's book catalogue. |
 | [tg-osint](https://github.com/Dataset-explorer-tui-kit/tg-osint) | A standalone Telegram OSINT reader. |
 
