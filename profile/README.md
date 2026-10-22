@@ -69,13 +69,15 @@ The workflow diagram is rendered with Pele; its editable source is
 | **[dataset-explorer-kit](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit)** | Main repository: reusable kit, recipe selection, agent-managed decision history, scaffolding and VHS demos. |
 | [cbk-explorer](https://github.com/Dataset-explorer-tui-kit/cbk-explorer) | A dataset-specific explorer for the Dutch children's book catalogue. |
 | [tg-osint](https://github.com/Dataset-explorer-tui-kit/tg-osint) | A standalone Telegram OSINT reader. |
-| [dutch-news-explorer](https://github.com/Dataset-explorer-tui-kit/dutch-news-explorer) | A read-only explorer for 255,524 Dutch news articles (2010–2023): browse by date, title and category, search the full text, inspect the original record and export the matches. |
+| [dutch-news-explorer](https://github.com/Dataset-explorer-tui-kit/dutch-news-explorer) | A read-only explorer for 255,524 Dutch news articles (2010–2023): the default path is a derived, read-only DuckDB snapshot with lazy paging and full-text search; browse by date, title and category, inspect the exact source line and export the matches. |
 
 Start with the **[main README](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit#readme)**
 for an overview of the kit and its applications.
 
 These repositories are currently private; their links require access.
 
-A large corpus does not have to become a database project: `dutch-news-explorer`
-raises the snapshot budget explicitly, refuses anything larger, and searches each
-record's original line instead of keeping a second copy of the article text.
+A database stays optional in the kit. `dutch-news-explorer` shows the deliberate
+exception: when its in-memory CSV path measured about 1.8 GB, it derived a
+read-only DuckDB snapshot outside Git, keeps the unchanged CSV for exact source
+lines, and pages records with bounded memory. The in-memory CSV fallback remains
+available explicitly.
