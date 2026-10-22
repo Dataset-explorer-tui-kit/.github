@@ -80,6 +80,38 @@ and [recipe-selection guide](https://github.com/Dataset-explorer-tui-kit/dataset
 The workflow above includes checkpoints and separately authorized publication;
 the project guide explains their safety boundaries in detail.
 
+## The long-term game: project history becomes learning material
+
+**Git is more than a backup: it is the trace from a research request to a
+decision, a code or recipe change, and its verification.** In agent-managed
+projects, structured decision notes and human-readable commit bodies preserve
+the request, the chosen approach, why it was chosen, alternatives, evidence,
+and check results. User intent, agent inference, and unknown reasons stay distinct.
+
+The intended progression is:
+
+1. **Capture evidence now.** Keep versioned changes, decision notes, verification
+   receipts, and honestly recorded outcomes. A passing test is not proof that a
+   research task succeeded; failures and user corrections matter too.
+2. **Compare projects deliberately.** Review and redact histories, identify repeated
+   decisions, and turn relevant examples into task-specific evaluation cases.
+   Session notes are observations—not automatically trustworthy training labels.
+3. **Establish a baseline.** Define success criteria, measure today's recipe-selection
+   workflow, and reserve independent held-out cases. Split related projects and
+   near-duplicate tasks carefully to avoid leaking answers into evaluation.
+4. **Experiment with DSPy later.** Optimize build-time recipe proposals and workflow
+   choices against reviewed examples, then evaluate on unseen tasks. Keep unsupported
+   capabilities explicit. Never optimize away source safety, required checks,
+   authorization, or honest reporting.
+5. **Adopt only demonstrated improvements.** Review the proposed change, version the
+   workflow and evaluation results, and keep rollback possible. Broader automation
+   follows evidence—not simply a growing commit count.
+
+**Available now:** agent-managed Git checkpoints, structured decision records,
+and initial manual recipe-selection cases. **Not installed yet:** an automatic
+cross-project collector, outcome-labeling pipeline, or DSPy optimizer. The eventual
+learning loop helps build better explorers; it does not put an LLM inside them.
+
 ## Repositories
 
 | Repository | Purpose |

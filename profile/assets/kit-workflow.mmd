@@ -18,8 +18,12 @@ flowchart TD
     verify -.->|Fail: fix and retry| fit
     history --> use
     use -.-> publish
+    learn["LATER · COMPARE APPS<br/>Review notes + outcomes<br/>Build cases + a baseline"]
+    optimize["FUTURE · DSPy LOOP<br/>Optimize recipe choices<br/>Held-out checks + review"]
+    history -.-> learn
+    learn -.-> optimize
     class intent input
     class inspect,fit,recipe,custom agent
     class verify,history core
     class use output
-    class publish optional
+    class publish,learn,optimize optional

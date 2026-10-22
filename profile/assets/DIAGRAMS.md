@@ -5,6 +5,10 @@ Two views of the kit, rendered with Pele:
 - `kit-overview.mmd`: kit components and build-time/runtime boundary.
 - `kit-workflow.mmd`: agent-assisted delivery, verification, checkpoints and optional publication.
 
+Both include a clearly marked long-term roadmap: versioned evidence, reviewed
+cross-project cases, baseline/held-out evaluation, and future DSPy proposal
+optimization. These dashed paths are plans, not installed automation.
+
 The profile uses `<picture>` to select explicit light/dark SVGs with
 `prefers-color-scheme`. Each image has its own background and readable foregrounds;
 the light SVG is the fallback. No JavaScript or runtime render service is needed.
