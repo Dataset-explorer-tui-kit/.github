@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "id": "dutch-news-explorer-guide-entry",
+  "created_at": "2026-10-22T20:01:00+00:00",
+  "request": "Add the new dutch-news-explorer repository to the organization repository guide.",
+  "decision": "Add one repository row and one short paragraph describing the explicit snapshot budget and the original-line search, without article text or private paths.",
+  "why": {
+    "text": "The organization guide lists every published explorer; a new private repository belongs there, and its one general lesson (an explicit budget for a large corpus) is useful to the next project.",
+    "origin": "agent-inference"
+  },
+  "evidence": "The explorer repository is published privately at Dataset-explorer-tui-kit/dutch-news-explorer with a fictional VHS demo and a measured profile; its README documents 255,524 records, an explicit 480,000,000-byte / 260,000-record budget and peak RSS around 1.8 GB. The guide text names no dataset rows, hosts, paths or session details.",
+  "alternatives": [
+    "Describe the corpus contents in the public guide, which would publish article-level detail the source licence does not grant here."
+  ],
+  "verification": {
+    "status": "passed",
+    "scope": "Documentation-only repository; no Go program or Go gates apply here.",
+    "checks": [
+      {
+        "argv": ["git", "diff", "--check"],
+        "exit_code": 0
+      },
+      {
+        "kind": "manual",
+        "result": "Row and paragraph read as intended; no article text, credentials or personal paths; links point at the private organization repositories."
+      }
+    ]
+  }
+}

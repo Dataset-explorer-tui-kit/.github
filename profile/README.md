@@ -64,8 +64,13 @@ The workflow diagram is rendered with Pele; its editable source is
 | **[dataset-explorer-kit](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit)** | Main repository: reusable kit, recipe selection, agent-managed decision history, scaffolding and VHS demos. |
 | [cbk-explorer](https://github.com/Dataset-explorer-tui-kit/cbk-explorer) | A dataset-specific explorer for the Dutch children's book catalogue. |
 | [tg-osint](https://github.com/Dataset-explorer-tui-kit/tg-osint) | A standalone Telegram OSINT reader. |
+| [dutch-news-explorer](https://github.com/Dataset-explorer-tui-kit/dutch-news-explorer) | A read-only explorer for 255,524 Dutch news articles (2010–2023): browse by date, title and category, search the full text, inspect the original record and export the matches. |
 
 Start with the **[main README](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit#readme)**
 for an overview of the kit and its applications.
 
 These repositories are currently private; their links require access.
+
+A large corpus does not have to become a database project: `dutch-news-explorer`
+raises the snapshot budget explicitly, refuses anything larger, and searches each
+record's original line instead of keeping a second copy of the article text.
