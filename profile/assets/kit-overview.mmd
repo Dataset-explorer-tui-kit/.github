@@ -1,15 +1,37 @@
 flowchart TD
-    goal["YOU HAVE DATA<br/>Books, articles, records<br/>and questions about them"]
-    kit["AGENT + REUSABLE KIT<br/>File readers, search,<br/>screens and export tools"]
-    app["YOUR OWN EXPLORER<br/>Find and read records<br/>Save matching results"]
-    goal --> kit
-    kit --> app
-    history["SAVE THE LESSONS<br/>Git records what changed<br/>Notes explain why"]
-    better["LATER: BETTER BUILDS<br/>Compare what worked<br/>Test better agent choices"]
-    kit -.-> history
-    history -.-> better
-    class goal input
-    class kit agent
-    class app output
-    class history core
-    class better optional
+    subgraph build["BUILD TIME · an agent makes the app fit your question"]
+      direction LR
+      ask["YOUR DATA + QUESTION<br/>What do you want to find?<br/>Agent reads the kit guide"]
+      setup["FIT THE APP TO THE DATA<br/>Choose fields and search<br/>Add code only if needed"]
+      check["TRY IT AND SAVE WHY<br/>Run tests + real searches<br/>Git changes + reasons"]
+      ask --> setup
+      setup --> check
+    end
+    subgraph runtime["RUN TIME · you use the app, with no AI inside"]
+      direction LR
+      files["YOUR LOCAL FILES<br/>Tables, posts, archives<br/>Originals stay unchanged"]
+      search["READ AND SEARCH<br/>Keep record structure<br/>Find matching records"]
+      app["YOUR TERMINAL APP<br/>Browse, read and compare<br/>Switch between layouts"]
+      results["KEEP YOUR FINDINGS<br/>Inspect original records<br/>Export matching results"]
+      files --> search
+      search --> app
+      app --> results
+    end
+    setup --> search
+    check --> app
+    subgraph future["FUTURE · learn from past projects; not automated yet"]
+      direction LR
+      notes["GIT HISTORY + NOTES<br/>What changed and why?<br/>What worked or failed?"]
+      cases["REVIEW THE EXAMPLES<br/>Compare across projects<br/>Keep unseen test requests"]
+      dspy["TRY BETTER CHOICES<br/>DSPy proposes settings<br/>Test and review them first"]
+      notes -.-> cases
+      cases -.-> dspy
+    end
+    files ~~~ notes
+    search ~~~ cases
+    app ~~~ dspy
+    class ask,setup,check agent
+    class files input
+    class search,app core
+    class results output
+    class notes,cases,dspy optional

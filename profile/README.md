@@ -14,7 +14,7 @@ rather than starting from scratch. You then use the app yourself.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-overview-dark.svg">
-  <img alt="You bring data and questions. An agent uses ready-made kit parts to build a terminal app. You find and read records and save results. Git changes and notes preserve lessons that can improve future builds." src="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-overview-light.svg">
+  <img alt="Build time: an agent fits the kit to your question, tests the app and saves why. Run time: you browse and search local records and export results without AI. Future: review Git history and outcomes across projects, then test DSPy proposals before use." src="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-overview-light.svg">
 </picture>
 
 **Use what fits your data:** tables, feeds, or archival hierarchies. Keep the
@@ -130,30 +130,39 @@ learning loop helps build better explorers; it does not put an LLM inside them.
 Search a fictional book catalogue, find a topic mentioned only in notes, and
 inspect the fields and original record.
 
-[![Dataset Explorer Kit: browse fictional books, search notes, and inspect fields and source.](assets/recipe-selection.gif)](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit)
+[![Dataset Explorer Kit: browse fictional books, search notes, and inspect fields and source.](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/recipe-selection.gif)](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/recipe-selection.gif)
+
+[Open animation](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/recipe-selection.gif) · [Repository](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit)
 
 ### CBK Explorer — children's books
 
 Search the catalogue for Rosa Parks and view the selected book's cover and details.
 
-[![CBK Explorer: search for Rosa Parks and display the book cover and catalogue details.](assets/cbk-explorer.gif)](https://github.com/Dataset-explorer-tui-kit/cbk-explorer)
+[![CBK Explorer: search for Rosa Parks and display the book cover and catalogue details.](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/cbk-explorer.gif)](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/cbk-explorer.gif)
+
+[Open animation](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/cbk-explorer.gif) · [Repository](https://github.com/Dataset-explorer-tui-kit/cbk-explorer)
 
 ### TG OSINT — Telegram posts
 
 Move between feeds, conflict areas, channels and individual posts. Source labels
 and draft assessments remain distinct from verified facts.
 
-[![TG OSINT: browse feeds, conflict areas and channels, search posts, and inspect a post and its source context.](assets/tg-osint.gif)](https://github.com/Dataset-explorer-tui-kit/tg-osint)
+[![TG OSINT: browse feeds, conflict areas and channels, search posts, and inspect a post and its source context.](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/tg-osint.gif)](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/tg-osint.gif)
+
+[Open animation](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/tg-osint.gif) · [Repository](https://github.com/Dataset-explorer-tui-kit/tg-osint)
 
 ### Dutch News Explorer — newspaper articles
 
 Find articles about Keukenhof, narrow the search, inspect field statistics, and
 read the exact source line. This demo shows the read-only DuckDB version.
 
-[![Dutch News Explorer: search NOS articles about Keukenhof, narrow the results, and inspect fields and the original source line.](assets/dutch-news-explorer.gif)](https://github.com/Dataset-explorer-tui-kit/dutch-news-explorer)
+[![Dutch News Explorer: search NOS articles about Keukenhof, narrow the results, and inspect fields and the original source line.](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/dutch-news-explorer.gif)](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/dutch-news-explorer.gif)
+
+[Open animation](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/dutch-news-explorer.gif) · [Repository](https://github.com/Dataset-explorer-tui-kit/dutch-news-explorer)
 
 These are existing recordings of the actual apps, not mockups. The previews are
 public here; opening the private repositories still requires access.
+If GitHub pauses an animation, use **Open animation** to view the GIF directly.
 
 Start with the **[main README](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit#readme)**
 for an overview of the kit and its applications.

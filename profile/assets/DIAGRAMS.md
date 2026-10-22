@@ -2,7 +2,7 @@
 
 Two views of the kit, rendered with Pele:
 
-- `kit-overview.mmd`: what you bring, what the kit provides, and what you get.
+- `kit-overview.mmd`: build time, run time and future learning, with plain-language labels.
 - `kit-workflow.mmd`: an illustrative book-search request, from setup to verified
   results and a Git commit explaining why notes need to be searchable.
 
