@@ -1,0 +1,21 @@
+flowchart TD
+    question["YOU<br/>Local dataset +<br/>research question"]
+    agent["CODING AGENT<br/>Read the kit skill<br/>Inspect a bounded sample"]
+    choice{"Does the kit already<br/>fit the dataset?"}
+    recipe["CONFIGURE<br/>Map real fields<br/>in a recipe"]
+    scaffold["EXTEND<br/>Scaffold a standalone app<br/>Add only missing behavior"]
+    verify["VERIFY<br/>Tests + real data checks<br/>Wide and narrow UI runs"]
+    app["YOU USE THE EXPLORER<br/>Browse, search, inspect<br/>Export matching records"]
+    question --> agent
+    agent --> choice
+    choice -->|Yes| recipe
+    choice -->|Needs custom behavior| scaffold
+    recipe --> verify
+    scaffold --> verify
+    verify --> app
+    classDef human fill:#eff6ff,stroke:#2563eb,color:#172554
+    classDef build fill:#f5f3ff,stroke:#7c3aed,color:#2e1065
+    classDef runtime fill:#ecfdf5,stroke:#059669,color:#064e3b
+    class question human
+    class agent,choice,recipe,scaffold,verify build
+    class app runtime
