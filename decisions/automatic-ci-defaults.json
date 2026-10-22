@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "id": "automatic-ci-defaults",
+  "created_at": "2026-10-22T20:24:14.542856+00:00",
+  "request": "CI and Dependabot should be automatic parts of the explorer workflow.",
+  "decision": "Document CI and Dependabot as defaults in the organization workflow guide.",
+  "why": {
+    "text": "The user requires these automation features rather than an absent-CI handoff.",
+    "origin": "user-explicit"
+  },
+  "evidence": "The kit and Dutch News Explorer now contain fixture-only pinned CI and Go/Actions Dependabot schedules, with regression tests for new scaffold outputs. The organization guide is updated to state the default and require actual CI verification.",
+  "alternatives": [],
+  "verification": {
+    "status": "passed",
+    "scope": "Documentation-only profile update; both application CI runs verified separately on GitHub.",
+    "checks": [
+      {"argv": ["git", "diff", "--check"], "exit_code": 0},
+      {"kind": "remote", "result": "Kit CI 39848448582 and Dutch News CI 39848450336 both passed quality and race jobs; Dependabot Go and Actions updater jobs started in both repositories."}
+    ]
+  }
+}

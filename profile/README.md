@@ -44,6 +44,11 @@ local commit containing its decision and verification receipt. Failed checks sto
 the checkpoint; no background watcher or automatic push is installed. Decision
 notes can later be compared across projects; no DSPy optimizer is installed yet.
 
+**CI and Dependabot are included automatically in every new scaffold.** CI checks
+formatting, module consistency, vet, tests, race detection and build using only
+fixtures. Dependabot proposes Go and GitHub Actions updates for review, without
+auto-merging. Publishing is not complete until actual GitHub CI has been checked.
+
 Before publishing a new explorer here, record the actual binary with **VHS** on
 reviewed safe data, embed the GIF in its README, retain organization attribution,
 and update the repository guide below. Visibility stays private unless public
