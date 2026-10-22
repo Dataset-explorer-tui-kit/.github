@@ -77,9 +77,8 @@ reviewed safe data, embed the GIF in its README, retain organization attribution
 and update the repository guide below. Visibility stays private unless public
 publication is explicitly approved.
 
-![Real kit binary on fictional catalogue records: browse, notes-only search, fields and source. Recorded with VHS.](assets/recipe-selection.gif)
-
-The demo contains only fictional records, not project datasets or session history.
+The kit demo in the repository section below contains only fictional records,
+not project datasets or session history.
 See the kit's [project workflow](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit/blob/main/docs/PROJECT-WORKFLOW.md)
 and [recipe-selection guide](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit/blob/main/docs/RECIPE-SELECTION.md).
 The workflow above includes checkpoints and separately authorized publication;
@@ -125,6 +124,36 @@ learning loop helps build better explorers; it does not put an LLM inside them.
 | [cbk-explorer](https://github.com/Dataset-explorer-tui-kit/cbk-explorer) | A dataset-specific explorer for the Dutch children's book catalogue. |
 | [tg-osint](https://github.com/Dataset-explorer-tui-kit/tg-osint) | A standalone Telegram OSINT reader. |
 | [dutch-news-explorer](https://github.com/Dataset-explorer-tui-kit/dutch-news-explorer) | A read-only explorer for 255,524 Dutch news articles (2010–2023): the default path is a derived, read-only DuckDB snapshot with lazy paging and full-text search; browse by date, title and category, inspect the exact source line and export the matches. |
+
+### Dataset Explorer Kit — the starting point
+
+Search a fictional book catalogue, find a topic mentioned only in notes, and
+inspect the fields and original record.
+
+[![Dataset Explorer Kit: browse fictional books, search notes, and inspect fields and source.](assets/recipe-selection.gif)](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit)
+
+### CBK Explorer — children's books
+
+Search the catalogue for Rosa Parks and view the selected book's cover and details.
+
+[![CBK Explorer: search for Rosa Parks and display the book cover and catalogue details.](assets/cbk-explorer.gif)](https://github.com/Dataset-explorer-tui-kit/cbk-explorer)
+
+### TG OSINT — Telegram posts
+
+Move between feeds, conflict areas, channels and individual posts. Source labels
+and draft assessments remain distinct from verified facts.
+
+[![TG OSINT: browse feeds, conflict areas and channels, search posts, and inspect a post and its source context.](assets/tg-osint.gif)](https://github.com/Dataset-explorer-tui-kit/tg-osint)
+
+### Dutch News Explorer — newspaper articles
+
+Find articles about Keukenhof, narrow the search, inspect field statistics, and
+read the exact source line. This demo shows the read-only DuckDB version.
+
+[![Dutch News Explorer: search NOS articles about Keukenhof, narrow the results, and inspect fields and the original source line.](assets/dutch-news-explorer.gif)](https://github.com/Dataset-explorer-tui-kit/dutch-news-explorer)
+
+These are existing recordings of the actual apps, not mockups. The previews are
+public here; opening the private repositories still requires access.
 
 Start with the **[main README](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit#readme)**
 for an overview of the kit and its applications.
