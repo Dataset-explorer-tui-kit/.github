@@ -1,38 +1,15 @@
 flowchart TD
-    subgraph build["BUILD TIME · the agent uses the kit"]
-      direction LR
-      skill["GUIDANCE<br/>Versioned agent skill<br/>Examples + task profile"]
-      recipe["CONFIGURATION<br/>Real field mappings<br/>Search + layout + limits"]
-      tooling["PROJECT TOOLS<br/>Optional scaffolding<br/>Decision notes + checks"]
-      skill --> recipe
-      recipe --> tooling
-    end
-    subgraph runtime["RUN TIME · you use the explorer, not an LLM"]
-      direction LR
-      source["LOCAL INPUT<br/>CSV / TSV / JSONL<br/>EAD archival hierarchy"]
-      data["DATA LAYER<br/>Readers + record model<br/>Search + profiles + export"]
-      ui["TERMINAL UI<br/>Bubble Tea + Lip Gloss<br/>A / B layouts, shared state"]
-      result["RESEARCH OUTPUT<br/>Read records + source<br/>Inspect / JSONL export"]
-      source --> data
-      data --> ui
-      ui --> result
-    end
-    recipe --> data
-    tooling --> ui
-    subgraph learning["LONG-TERM ROADMAP · not an installed pipeline"]
-      direction LR
-      evidence["VERSIONED EVIDENCE<br/>Git changes + decisions<br/>Checks + task outcomes"]
-      cases["REVIEWED CASES<br/>Compare across projects<br/>Baseline + held-out tasks"]
-      dspy["FUTURE DSPy LOOP<br/>Optimize recipe proposals<br/>Evaluate before adoption"]
-      evidence -.-> cases
-      cases -.-> dspy
-    end
-    %% Layout only: place the roadmap below runtime, without a causal arrow.
-    source ~~~ evidence
-    data ~~~ cases
-    ui ~~~ dspy
-    class evidence,cases,dspy optional
-    class skill,recipe,tooling agent
-    class source input
-    class data,ui core
-    class result output
+    goal["YOU HAVE DATA<br/>Books, articles, records<br/>and questions about them"]
+    kit["AGENT + REUSABLE KIT<br/>File readers, search,<br/>screens and export tools"]
+    app["YOUR OWN EXPLORER<br/>Find and read records<br/>Save matching results"]
+    goal --> kit
+    kit --> app
+    history["SAVE THE LESSONS<br/>Git records what changed<br/>Notes explain why"]
+    better["LATER: BETTER BUILDS<br/>Compare what worked<br/>Test better agent choices"]
+    kit -.-> history
+    history -.-> better
+    class goal input
+    class kit agent
+    class app output
+    class history core
+    class better optional

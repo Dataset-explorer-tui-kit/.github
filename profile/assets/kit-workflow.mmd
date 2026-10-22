@@ -1,29 +1,22 @@
 flowchart TD
-    intent["01 · YOU SET THE GOAL<br/>Local dataset + question<br/>Agree scope + location"]
-    inspect["02 · AGENT INSPECTS<br/>Read skill + sample data<br/>Check source + budget"]
-    fit{"03 · Choose the<br/>smallest useful solution"}
-    recipe["RECIPE FIRST<br/>Map fields and search<br/>Explain choices + gaps"]
-    custom["CUSTOM WORK<br/>Approved standalone app<br/>Extend only the gaps"]
-    verify["04 · VERIFY THE RESULT<br/>Required tests, vet, build<br/>Real data + wide/narrow UI"]
-    history["05 · RECORD THE WHY<br/>Agent-managed projects:<br/>decision + local checkpoint"]
-    use["06 · HAND OFF AND USE<br/>Run command + limits<br/>Browse, search, export"]
-    publish["OPTIONAL · PUBLISH<br/>Separate authorization<br/>Safe VHS demo + check CI"]
-    intent --> inspect
-    inspect --> fit
-    fit -->|Supported| recipe
-    fit -->|Capability gap| custom
-    recipe --> verify
-    custom --> verify
-    verify -->|Pass| history
-    verify -.->|Fail: fix and retry| fit
-    history --> use
-    use -.-> publish
-    learn["LATER · COMPARE APPS<br/>Review notes + outcomes<br/>Build cases + a baseline"]
-    optimize["FUTURE · DSPy LOOP<br/>Optimize recipe choices<br/>Held-out checks + review"]
-    history -.-> learn
-    learn -.-> optimize
-    class intent input
-    class inspect,fit,recipe,custom agent
-    class verify,history core
+    ask["1 · YOUR REQUEST<br/>Here is my book catalogue.<br/>Find books on watermills."]
+    inspect["2 · AGENT LOOKS<br/>The file has titles<br/>and descriptive notes."]
+    choose["3 · AGENT SETS IT UP<br/>Show title, author, year.<br/>Search the notes too."]
+    test["4 · TEST THE SEARCH<br/>Find a book where only<br/>the notes say watermill."]
+    save["5 · SAVE THE REASON<br/>Git: search notes too.<br/>Why: titles missed books."]
+    use["6 · YOU USE THE APP<br/>Read the matching books.<br/>Export your selection."]
+    ask --> inspect
+    inspect --> choose
+    choose --> test
+    test -->|Works| save
+    test -.->|Not yet: improve it| choose
+    save --> use
+    lessons["LATER: COLLECT EXAMPLES<br/>Which fields helped?<br/>Which searches failed?"]
+    improve["FUTURE: USE DSPy<br/>Try better field choices.<br/>Test on unseen requests."]
+    save -.-> lessons
+    lessons -.-> improve
+    class ask input
+    class inspect,choose agent
+    class test,save core
     class use output
-    class publish,learn,optimize optional
+    class lessons,improve optional

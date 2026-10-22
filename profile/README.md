@@ -7,14 +7,14 @@ repository and can evolve independently. No LLM is required at runtime.
 
 ## The whole kit
 
-The kit brings together agent guidance, explicit recipes, project tooling, local
-data readers, and a reusable terminal UI. Build-time assistance stays separate
-from the app you run. Choose the smallest useful solution: a recipe first,
-custom code only for real capability gaps.
+Have a dataset that is awkward to explore? Give it to a coding agent with a
+question—for example, “Find books where the notes mention watermills.” The kit
+gives the agent ready-made parts to build a small terminal app for that task,
+rather than starting from scratch. You then use the app yourself.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-overview-dark.svg">
-  <img alt="Whole-kit overview: at build time the agent uses the skill, recipes and project tools; at runtime local data flows through readers and the data layer into the Charm terminal UI and research outputs. No runtime LLM is involved." src="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-overview-light.svg">
+  <img alt="You bring data and questions. An agent uses ready-made kit parts to build a terminal app. You find and read records and save results. Git changes and notes preserve lessons that can improve future builds." src="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-overview-light.svg">
 </picture>
 
 **Use what fits your data:** tables, feeds, or archival hierarchies. Keep the
@@ -28,9 +28,14 @@ Give a coding agent a local dataset, a research question, and the kit's
 [workflow skill](https://github.com/Dataset-explorer-tui-kit/dataset-explorer-kit/blob/main/skills/dataset-explorer/SKILL.md).
 The agent uses the kit rather than starting an interface from scratch.
 
+**A concrete example:** you want books about watermills, but the topic may appear
+only in descriptive notes. The agent makes those notes searchable, checks that
+the book is found, and saves why that choice mattered. This is an illustrative
+example, not a claim that every catalogue has these fields.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-workflow-dark.svg">
-  <img alt="Agent workflow: agree a goal and scope, inspect the dataset, choose a recipe or approved custom work, verify with a failure-and-retry loop, checkpoint agent-managed changes, and hand off the explorer. Publication requires separate authorization, a safe VHS demo and verified CI." src="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-workflow-light.svg">
+  <img alt="Example: ask for books on watermills. The agent sees titles and notes, makes notes searchable, tests a notes-only match, and commits the change with the reason that titles missed books. You read and export results. Later, reviewed examples could help DSPy choose better search fields for unseen requests." src="https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/kit-workflow-light.svg">
 </picture>
 
 **The agent helps build it. It does not run inside it.** The resulting explorer
