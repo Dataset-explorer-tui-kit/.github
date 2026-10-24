@@ -124,6 +124,7 @@ learning loop helps build better explorers; it does not put an LLM inside them.
 | [cbk-explorer](https://github.com/Dataset-explorer-tui-kit/cbk-explorer) | A dataset-specific explorer for the Dutch children's book catalogue. |
 | [tg-osint](https://github.com/Dataset-explorer-tui-kit/tg-osint) | A standalone Telegram OSINT reader. |
 | [dutch-news-explorer](https://github.com/Dataset-explorer-tui-kit/dutch-news-explorer) | A read-only explorer for 255,524 Dutch news articles (2010–2023): the default path is a derived, read-only DuckDB snapshot with lazy paging and full-text search; browse by date, title and category, inspect the exact source line and export the matches. |
+| [ait-explorer](https://github.com/Dataset-explorer-tui-kit/ait-explorer) | A read-only explorer for the AIT incident dataset (ISD; 544 incidents of authoritarian interference): scan year, actor → target country and title, read summary and cited sources, and export the matches. Ships a table projection and a lossless JSONL view; refresh is a separate script, the app itself stays offline. |
 
 ### Dataset Explorer Kit — the starting point
 
