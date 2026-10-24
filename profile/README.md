@@ -161,6 +161,16 @@ read the exact source line. This demo shows the read-only DuckDB version.
 
 [Open animation](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/dutch-news-explorer.gif) · [Repository](https://github.com/Dataset-explorer-tui-kit/dutch-news-explorer)
 
+### AIT Explorer — interference incidents
+
+Scan year, actor → target country and title; search narrows the list, and field
+statistics plus the original source line are one Tab away. The recording uses a
+fictional six-record fixture, not the live dataset.
+
+[![AIT Explorer: browse fictional interference records, search Syldavia to narrow six records to two, inspect field statistics and read the original source line.](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/ait-explorer.gif)](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/ait-explorer.gif)
+
+[Open animation](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/ait-explorer.gif) · [Repository](https://github.com/Dataset-explorer-tui-kit/ait-explorer)
+
 These are existing recordings of the actual apps, not mockups. The previews are
 public here; opening the private repositories still requires access.
 If GitHub pauses an animation, use **Open animation** to view the GIF directly.
