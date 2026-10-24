@@ -165,9 +165,9 @@ read the exact source line. This demo shows the read-only DuckDB version.
 
 Scan year, actor → target country and title; search narrows the list, and field
 statistics plus the original source line are one Tab away. The recording uses a
-fictional six-record fixture, not the live dataset.
+fictional 24-record fixture, not the live dataset.
 
-[![AIT Explorer: browse fictional interference records, search Syldavia to narrow six records to two, inspect field statistics and read the original source line.](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/ait-explorer.gif)](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/ait-explorer.gif)
+[![AIT Explorer: browse fictional interference records, search Syldavia to narrow 24 records to 6, inspect field statistics and read the original source line.](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/ait-explorer.gif)](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/ait-explorer.gif)
 
 [Open animation](https://raw.githubusercontent.com/Dataset-explorer-tui-kit/.github/main/profile/assets/ait-explorer.gif) · [Repository](https://github.com/Dataset-explorer-tui-kit/ait-explorer)
 
